@@ -1,0 +1,19 @@
+{% extends 'master' %}
+
+{% block content %}
+
+	{% for error in old('errors') %}
+		<h2>{{ error.message }}</h2>
+	{% endfor %}
+
+	{{ form.open({action: 'LoginController.login'}) }}
+
+	{{ form.text('email', old('email')) }}
+	{{ form.password('password', old('password')) }}
+
+	{{ form.submit('Login') }}
+	{{ csrfField }}
+
+	{{ form.close() }}
+
+{% endblock %}
