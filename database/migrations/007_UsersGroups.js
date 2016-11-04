@@ -16,7 +16,7 @@ class UserGroupRelationsTableSchema extends Schema {
 	}
 
 	down() {
-		this.dropTableIfExists( UserGroup.table );
+		this.dropIfExists( UserGroup.table );
 	}
 
 }

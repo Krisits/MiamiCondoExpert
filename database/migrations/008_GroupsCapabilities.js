@@ -16,7 +16,7 @@ class GroupCapabilityRelationsTableSchema extends Schema {
 	}
 
 	down() {
-		this.dropTableIfExists( GroupCapability.table );
+		this.dropIfExists( GroupCapability.table );
 	}
 
 }

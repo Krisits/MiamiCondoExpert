@@ -16,7 +16,7 @@ class UsersTableSchema extends Schema {
 	}
 
 	down() {
-		this.dropTableIfExists( User.table );
+		this.dropIfExists( User.table );
 	}
 
 }

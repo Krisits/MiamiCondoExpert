@@ -16,7 +16,7 @@ class UserCapabilityRelationsTableSchema extends Schema {
 	}
 
 	down() {
-		this.dropTableIfExists( UserCapability.table );
+		this.dropIfExists( UserCapability.table );
 	}
 
 }

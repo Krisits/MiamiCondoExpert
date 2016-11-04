@@ -14,7 +14,7 @@ class CapabilitiesTableSchema extends Schema {
 	}
 
 	down() {
-		this.dropTableIfExists( Capability.table );
+		this.dropIfExists( Capability.table );
 	}
 
 }

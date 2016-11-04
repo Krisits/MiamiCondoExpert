@@ -18,7 +18,7 @@ class ProfilesTableSchema extends Schema {
 	}
 
 	down() {
-		this.dropTableIfExists( Profile.table );
+		this.dropIfExists( Profile.table );
 	}
 
 }

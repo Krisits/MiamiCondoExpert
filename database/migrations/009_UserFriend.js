@@ -18,7 +18,7 @@ class UserFriendsTableSchema extends Schema {
 	}
 
 	down() {
-		this.dropTableIfExists( UserFriend.table );
+		this.dropIfExists( UserFriend.table );
 	}
 
 }
