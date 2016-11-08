@@ -1,0 +1,53 @@
+{% from '../navigation' import nav as navigation %}
+{% macro call_to_action_box(icon, text, largeText) %}
+	<aside class="call-to-action-box">
+		<div class="call-to-action-box-icon">
+			<span class="{{ icon }}"></span>
+		</div>
+		<div class="call-to-action-box-body">
+			{% if caller %}
+				{{ caller() }}
+			{% else %}
+				<h5>{{ text }}</h5>
+				<h4>{{ largeText }}</h4>
+			{% endif %}
+		</div>
+	</aside>
+{% endmacro %}
+<header id="masterhead" class="wrap">
+	<div class="box">
+		{{ call_to_action_box( 'icon-clock', '5-Minute Mortgage', 'Pre-Approval' ) }}
+		{{ navigation( 'home', {
+			home: {
+				link: '#',
+				value: 'Home'
+			},
+			rent: {
+				value: 'Rent'
+			},
+			buy: {
+				value: 'Buy'
+			},
+			sell: {
+				value: 'Sell'
+			}
+		} ) }}
+	</div>
+	<div class="box">
+		{% include '../logo' %}
+	</div>
+	<div class="box">
+		{{ call_to_action_box( 'icon-screen-smartphone', 'Call a Real Estate Agent:', '305-728-0840' ) }}
+		{{ navigation( 'home', {
+			specials: {
+				value: 'Specials'
+			},
+			news: {
+				value: 'News'
+			},
+			contact_us: {
+				value: 'Contact Us'
+			}
+		} ) }}
+	</div>
+</header>

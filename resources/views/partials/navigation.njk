@@ -1,0 +1,25 @@
+{% macro link( key, item, current, active = 'active' ) %}
+	<a href="{{ item.link|default('#') }}" class="{{ item.class|default('') }} {% if current === key %}{{ active }}{% endif %}">
+		{%- if caller %}{{ caller() }}{% else %}{{ item.value|default( key|capitalize ) }}{% endif -%}
+	</a>
+{% endmacro %}
+{% macro nav( current, items, class = 'navigation', active = 'active' ) %}
+	<nav class="navigation">
+		{% for key, item in items %}
+			{{ link( key, item, current, active ) }}
+		{% endfor %}
+	</nav>
+{% endmacro %}
+{% macro ul( current, items, class = 'navigation', active = 'active' ) %}
+	<ul class="{{ class }}">
+		{% for key, item in items %}
+			<li>{{ link( key, item, current, active ) }}</li>
+		{% endfor %}
+	</ul>
+{% endmacro %}
+{% macro navul( current, items, class = 'navigation', active = 'active' ) %}
+	<nav class="{{ class }}">
+		{{ ul( current, items, '', active ) }}
+	</nav>
+{% endmacro %}
+{{ navul( current, items, class, active ) }}

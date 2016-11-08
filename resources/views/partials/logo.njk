@@ -1,0 +1,4 @@
+{% macro img( link, title ) %}
+	<img src="{{ link|default( '/images/logo.png' ) }}" title="{{ title|default( 'logo' ) }}" />
+{% endmacro %}
+{{ img( link, title ) }}

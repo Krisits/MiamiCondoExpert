@@ -1,0 +1,29 @@
+{% extends 'master' %}
+
+{% block stylesheets %}
+	{{ super() }}
+	<link rel="stylesheet" type="text/css" href="/css/home/home.css" />
+{% endblock %}
+
+{% block content %}
+	<div id="page-home">
+		<h1>Hello from home!</h1>
+		{% if currentUser %}
+			<pre>User: {{ currentUser|dump }}</pre>
+			{% yield can = currentUser.can( 'administrate' ) %}
+			<pre>Can: {{ can|dump }}</pre>
+			{% yield profile = currentUser.getProfile() %}
+			{% yield capabilities = currentUser.getCapabilities() %}
+			{% yield groups = currentUser.getGroups() %}
+		{% endif %}
+		{% if profile %}
+			<pre>Profile: {{ profile|dump }}</pre>
+		{% endif %}
+		{% if capabilities %}
+			<pre>Capabilities: {{ capabilities|dump }}</pre>
+		{% endif %}
+		{% if groups %}
+			<pre>Groups: {{ groups|dump }}</pre>
+		{% endif %}
+	</div>
+{% endblock %}

@@ -7,14 +7,32 @@
 
 	<title>AdonisJs - Node.Js MVC Framework</title>
 
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900' rel='stylesheet'
-			type='text/css'>
-	<link rel="icon" href="/assets/favicon.png" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<!--<link rel="icon" href="/assets/favicon.png" type="image/x-icon">-->
+
+	{% block stylesheets %}
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+		<link rel="stylesheet" type="text/css" href="/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="/css/common.css" />
+	{% endblock %}
+
 </head>
 <body>
 <div id="page">
+	{% block header %}
+		{% include 'partials/header/header' %}
+	{% endblock %}
 	{% block content %}{% endblock %}
+	{% block footer %}
+		{% include 'partials/footer/footer' %}
+	{% endblock %}
 </div>
+{% block javascripts %}
+
+{% endblock %}
+{% block stylesheetsAsync %}
+	<!-- Loading font after everything has been loaded, to speed up page load time -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+{% endblock %}
 </body>
 </html>

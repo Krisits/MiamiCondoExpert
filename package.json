@@ -3,7 +3,9 @@
   "version": "3.1.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x \"npm start\"",
+    "build": "gulp",
+    "dev-start": "nodemon --watch app --watch bootstrap --watch config --watch .env -x \"npm start\"",
+	"dev" : "concurrently \"gulp watch\" \"npm run dev-start\" ",
     "start": "node server.js",
     "lint": "standard"
   },
@@ -20,6 +22,7 @@
     "adonis-lucid": "^3.0.10",
     "adonis-middleware": "^1.0.8",
     "adonis-validation-provider": "^3.0.4",
+    "decorator-wrap": "^1.2.4",
     "lodash": "^4.16.6",
     "moment": "^2.15.2",
     "moment-precise-range-plugin": "^1.2.0",
@@ -37,7 +40,17 @@
     "App": "./app"
   },
   "devDependencies": {
+    "concurrently": "^3.1.0",
+    "cssnano": "^3.8.0",
+    "gulp": "^3.9.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-image": "^2.7.2",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sourcemaps": "^2.2.0",
     "nodemon": "^1.11.0",
+    "postcss-cssnext": "^2.8.0",
+    "precss": "^1.4.0",
     "standard": "^8.3.0"
   }
 }
