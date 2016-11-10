@@ -3,17 +3,30 @@
 	flex-direction  : row;
 	justify-content : space-between;
 	padding         : 20px 0;
+	order           : -50;
 	.box {
 		display        : flex;
 		flex-direction : column;
 		flex-grow      : 1;
-		background     : gray;
-		min-height     : 1px;
 		padding-top    : 10px;
 		&:nth-child( 2 ) {
-			width       : 230px;
-			flex-grow   : 0;
-			padding-top : 0;
+			width     : 230px;
+			flex-grow : 0;
+			margin    : 0 110px;
+		}
+	}
+	.navigation {
+		padding-top     : 50px;
+		display         : flex;
+		flex-direction  : row;
+		justify-content : space-between;
+		padding-right   : 18px;
+		a {
+			text-transform  : uppercase;
+			font-size       : 12px;
+			font-weight     : 700;
+			line-height     : 15px;
+			text-decoration : none;
 		}
 	}
 }
@@ -35,7 +48,6 @@
 	}
 	&-body {
 		padding-left : 15px;
-		color        : #fff;
 		h4 {
 			font-weight    : 900;
 			letter-spacing : 7px;

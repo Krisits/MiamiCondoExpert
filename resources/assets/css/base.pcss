@@ -7,8 +7,20 @@
 
 body {
 	font-size   : 14px;
-	line-height : 17px;
+	line-height : 1.2;
 	background  : #fff;
+	color       : #1a1a1a;
+	> * {
+		transition : opacity 0.3s;
+	}
+	&.loading {
+		max-height : 100vh;
+		overflow   : hidden;
+		background : url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/585d0331234507.564a1d239ac5e.gif') center center no-repeat;
+		> * {
+			opacity : 0;
+		}
+	}
 }
 
 #page {
@@ -21,4 +33,15 @@ body {
 	width     : 100vw;
 	max-width : 1044px;
 	margin    : 0 auto;
+}
+
+img {
+	vertical-align : middle;
+	width          : 100%;
+	max-width      : 100%;
+	height         : auto;
+}
+
+.gradient {
+	background-image : linear-gradient(to right, #00aead 0%, #91cd3d 100%);
 }

@@ -51,6 +51,6 @@ gulp.task( 'images', function runImages() {
 
 gulp.task( 'watch', [ 'css', 'partials-css', 'images' ], function () {
 
-	return gulp.watch( [ config.from + '**/*.pcss', config.views + '**/*.pcss' ], [ 'css', 'partials-css' ] );
+	return gulp.watch( [ config.from + '**/*.pcss', config.views + '**/**/*.pcss' ], [ 'css', 'partials-css' ] );
 
 } );

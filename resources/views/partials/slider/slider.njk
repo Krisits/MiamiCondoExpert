@@ -1,0 +1,20 @@
+{% macro single_slide( slide, key ) %}
+	<img id="slide-{{ key }}" src="{{ slide.src|default( '/images/slider.png' ) }}" title="{{ slider.title|default( '' ) }}" />
+{% endmacro %}
+{% macro slider( slides, class, nav_class ) %}
+	{% set navigation = {} %}
+	{% set selected = 0 %}
+	<div class="slider {{ class|default('') }}">
+		{% for key, slide in slides %}
+			{{ single_slide( slide, key ) }}
+		{% endfor %}
+	</div>
+{% endmacro %}
+{{ slider( {
+	test: {
+		src: '/images/slider.png'
+	},
+	test2: {
+		src: '/images/slider.png'
+	}
+} ) }}

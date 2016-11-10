@@ -5,7 +5,43 @@
 	<link rel="stylesheet" type="text/css" href="/css/home/home.css" />
 {% endblock %}
 
+{% block header %}
+	{% include '../partials/slider/top' %}
+	{{ super() }}
+{% endblock %}
+
 {% block content %}
+	<div class="call-block gradient">
+		<div class="wrap">
+			<aside>
+				<div class="call-block-image">
+					<span class="icon-home"></span>
+				</div>
+				<div class="call-block-body">
+					<h5>listings online</h5>
+					<h3>4300</h3>
+				</div>
+			</aside>
+			<aside>
+				<div class="call-block-image">
+					<img src="/images/lady.png" />
+				</div>
+				<div class="call-block-body">
+					<h5>Immediate response</h5>
+					<h3><span class="round gradient"></span>ONLINE</h3>
+				</div>
+			</aside>
+			<aside>
+				<div class="call-block-image">
+					<span class="icon-screen-smartphone"></span>
+				</div>
+				<div class="call-block-body">
+					<h5>Text Now</h5>
+					<h3>555000</h3>
+				</div>
+			</aside>
+		</div>
+	</div>
 	<div id="page-home">
 		<h1>Hello from home!</h1>
 		{% if currentUser %}
