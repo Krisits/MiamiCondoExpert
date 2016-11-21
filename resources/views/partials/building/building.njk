@@ -1,0 +1,8 @@
+{% macro featured( building ) %}
+    <article class="featured-building">
+        <a href="{{ building.link|default( '#' ) }}">
+            <img src="{{ building.src|default( '/images/featured.png' ) }}"/>
+            <span class="gradient label">{{ building.name|default( 'Name' ) }}</span>
+        </a>
+    </article>
+{% endmacro %}

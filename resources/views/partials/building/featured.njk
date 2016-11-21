@@ -1,0 +1,12 @@
+{% from './building' import featured %}
+<div class="featured-buildings">
+	<div class="wrap">
+		<h3>view our</h3>
+		<h2>featured buildings</h2>
+		<div class="featured-building-wrap">
+			{% for building in featureds %}
+				{{ featured( building ) }}
+			{% endfor %}
+		</div>
+	</div>
+</div>

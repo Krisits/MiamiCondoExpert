@@ -1,0 +1,19 @@
+{% from './deal' import latest %}
+<div class="latest-deals">
+    <div class="wrap">
+        <div class="latest-deals-header">
+            <h2>Latest deals</h2>
+            <a href="#" class="gradient-border">View all</a>
+            <!-- It is not possible to make gradient border and border radius -->
+            <nav class="latest-deals-navigation">
+                <a href="#" class="gradient-text disabled"><span class="icon-arrow-left-circle"></span></a>
+                <a href="#" class="gradient-text"><span class="icon-arrow-right-circle"></span></a>
+            </nav>
+        </div>
+        <div class="latest-deal-wrap js-latest-deal-slider">
+            {% for deal in latests %}
+                {{ latest( deal ) }}
+            {% endfor %}
+        </div>
+    </div>
+</div>

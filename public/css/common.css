@@ -1,3 +1,233 @@
+.latest-deal {
+  max-width: 234px;
+  background: #fff;
+}
+
+.latest-deal-image {
+  position: relative;
+}
+
+.latest-deal-image span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 0 15px;
+  line-height: 22px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.latest-deal-body {
+  padding: 20px 14px;
+}
+
+.latest-deal-body h2 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+}
+
+.latest-deal-body h3 {
+  color: #1a1a1a;
+  font-size: 22px;
+}
+
+.latest-deal-body h3 span {
+  color: #a4a4a4;
+  font-size: 16px;
+  text-decoration: line-through;
+  margin-left: 12px;
+  line-height: 26px;
+  position: relative;
+  top: -2px;
+}
+
+.latest-deal-body a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  border-radius: 100px;
+  line-height: 40px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-decoration: none;
+  margin-top: 13px;
+}
+
+.latest-deal-contains {
+  margin: 0;
+  padding: 15px 0 10px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: #777;
+  font-size: 12px;
+}
+
+.latest-deal-contains li>span:first-child {
+  color: #00aead;
+}
+.latest-deals {
+  padding: 40px 0 50px;
+  background: url("../images/latest-bg.png") top repeat;
+  background-size: 100% auto;
+}
+
+.latest-deals h2 {
+  margin: 0;
+}
+
+.latest-deals h3 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.latest-deals-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.latest-deals-header h2 {
+  letter-spacing: 10px;
+  font-size: 22px;
+}
+
+.latest-deals-header a,
+.latest-deals-header h2 {
+  color: #2a2a2a;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.latest-deals-header a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.latest-deals-header>a {
+  width: 175px;
+  line-height: 50px;
+  border-radius: 100px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.latest-deal-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.latest-deal-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.latest-deals-navigation {
+  margin-left: auto;
+}
+
+.latest-deals-navigation a {
+  font-size: 35px;
+}
+
+.latest-deals-navigation a.disabled {
+  color: #d9dbe5;
+  -webkit-text-fill-color: #d9dbe5;
+}
+
+.latest-deals-navigation a+a {
+  margin-left: 15px;
+}
+.featured-building {
+  position: relative;
+}
+
+.featured-building span {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: -10px;
+  width: 90%;
+  width: calc(100% - 10px);
+  height: 32px;
+  line-height: 32px;
+  color: #fff;
+  padding-left: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+.featured-buildings {
+  padding: 50px 0 75px;
+}
+
+.featured-buildings h3 {
+  color: #bebebe;
+  font-size: 16px;
+  letter-spacing: 8px;
+}
+
+.featured-buildings h2,
+.featured-buildings h3 {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+.featured-buildings h2 {
+  color: #2d2d2d;
+  font-size: 36px;
+}
+
+.featured-buildings .featured-building-wrap {
+  padding-top: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.featured-buildings .featured-building-wrap>* {
+  max-width: 144px;
+}
 #masterhead {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;

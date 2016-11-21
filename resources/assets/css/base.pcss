@@ -1,47 +1,56 @@
 @charset "UTF-8";
 
 * {
-	box-sizing  : border-box;
-	font-family : 'Lato', sans-serif;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
 }
 
 body {
-	font-size   : 14px;
-	line-height : 1.2;
-	background  : #fff;
-	color       : #1a1a1a;
-	> * {
-		transition : opacity 0.3s;
-	}
+	font-size: 14px;
+	line-height: 1.2;
+	background: #fff;
+	color: #1a1a1a;
 	&.loading {
-		max-height : 100vh;
-		overflow   : hidden;
-		background : url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/585d0331234507.564a1d239ac5e.gif') center center no-repeat;
+		max-height: 100vh;
+		overflow: hidden;
+		background: #fff url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/585d0331234507.564a1d239ac5e.gif') center center no-repeat;
 		> * {
-			opacity : 0;
+			opacity: 0;
 		}
 	}
 }
 
 #page {
-	display        : flex;
-	flex-direction : column;
-	min-height     : 100vh;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 .wrap {
-	width     : 100vw;
-	max-width : 1044px;
-	margin    : 0 auto;
+	width: 100vw;
+	max-width: 1044px;
+	margin: 0 auto;
 }
 
 img {
-	vertical-align : middle;
-	width          : 100%;
-	max-width      : 100%;
-	height         : auto;
+	vertical-align: middle;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
 }
 
 .gradient {
-	background-image : linear-gradient(to right, #00aead 0%, #91cd3d 100%);
+	background-image: linear-gradient(to right, #00aead 0%, #91cd3d 100%);
+}
+
+.gradient-border {
+	border: 1px solid transparent;
+	border-image: linear-gradient(to right, #00aead 0%, #91cd3d 100%);
+	border-image-slice: 1;
+}
+
+.gradient-text {
+	background-image: linear-gradient(to right, #00aead 0%, #91cd3d 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

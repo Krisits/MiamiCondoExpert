@@ -1,0 +1,67 @@
+.latest-deals {
+	padding         : 40px 0 50px 0;
+	background      : url('../../images/latest-bg.png') center top repeat;
+	background-size : 100% auto;
+	h2 {
+		margin : 0;
+	}
+	h3 {
+		margin      : 0;
+		color       : #1a1a1a;
+		font-size   : 22px;
+		font-weight : 400;
+	}
+}
+
+.latest-deals-header {
+	display        : flex;
+	flex-direction : row;
+	align-items    : center;
+	padding-bottom : 40px;
+	h2 {
+		letter-spacing : 10px;
+		color          : #2a2a2a;
+		font-size      : 22px;
+		font-weight    : 700;
+		text-transform : uppercase;
+	}
+	a {
+		text-decoration : none;
+		color           : #2a2a2a;
+		font-size       : 14px;
+		font-weight     : 700;
+		text-transform  : uppercase;
+	}
+	> a {
+		width         : 175px;
+		line-height   : 50px;
+		border-radius : 100px;
+		margin-left   : 20px;
+		text-align    : center;
+	}
+}
+
+.latest-deal-slider {
+	width    : 100%;
+	overflow : hidden;
+}
+
+.latest-deal-wrap {
+	display         : flex;
+	flex-direction  : row;
+	justify-content : space-between;
+}
+
+.latest-deals-navigation {
+	margin-left : auto;
+	a {
+		font-size : 35px;
+		&.disabled {
+			color                   : #d9dbe5;
+			-webkit-text-fill-color : #d9dbe5;
+		}
+		& + a {
+			margin-left : 15px;
+		}
+	}
+}

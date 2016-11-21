@@ -25,6 +25,6 @@ Route.group( 'auth', () => {
 	Route.get( '/register', 'MainController.register' ).as( 'register' );
 } );
 
-Route.on( '/' ).render( 'home/home' ).as( 'home' );
+Route.any( '/', 'MainController.home' ).as( 'home' );
 
 

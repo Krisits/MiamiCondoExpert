@@ -1,0 +1,27 @@
+{% macro latest( deal ) %}
+    <article class="latest-deal">
+        <div class="latest-deal-image">
+            <img src="{{ deal.src|default( '/images/latest.png' ) }}"/>
+            <span class="gradient sale">Sale</span>
+        </div>
+        <div class="latest-deal-body">
+            <h2>{{ deal.title|default( 'Title' ) }} <span>#{{ deal.id|default( '123' ) }}</span></h2>
+            <ul class="latest-deal-contains">
+                <li>
+                    <span class="icon-home"></span>
+                    <span>1093 ft2</span>
+                </li>
+                <li>
+                    <span class="icon-home"></span>
+                    <span>2 BR</span>
+                </li>
+                <li>
+                    <span class="icon-home"></span>
+                    <span>2 BTH</span>
+                </li>
+            </ul>
+            <h3>$340 000<span>$360 500</span></h3>
+            <a href="#" class="gradient">VIEW PROPERTY</a>
+        </div>
+    </article>
+{% endmacro %}
